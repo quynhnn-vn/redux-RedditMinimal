@@ -9,7 +9,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 In the project directory, you can run:
 ### `yarn install`
 
-Installs all the dependencies in package.json file.\
+Installs all the dependencies in package.json file.
 
 ### `yarn start`
 
@@ -41,16 +41,16 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 ## Features
 
 ### `posts`
-- Load posts from Reddit API and display it
-- Load comments of a post and display it
-- Users can click up-vote or down-vote for a post
+Load posts from Reddit API and display it 
+Load comments of a post and display it 
+Users can click up-vote or down-vote for a post 
 
 ### `search`
-- Users can search posts using terms
+Users can search posts using terms 
 
 ### `subreddits`
-- Load subreddits list and display it
-- Users can choose a subreddit and view posts in that subreddit
+Load subreddits list and display it  
+Users can choose a subreddit and view posts in that subreddit  
 
 ## Future work
 - Add more unit tests and end-to-end tests
