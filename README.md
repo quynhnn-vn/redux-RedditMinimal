@@ -3,6 +3,7 @@
 Build an application for Reddit using React and Redux. This app will allow users to view and search posts and comments provided by Reddit API.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+View the deployed version here: [https://reddit-minimal-qnn.netlify.app/](https://reddit-minimal-qnn.netlify.app/)
 
 ## Available Scripts
 
