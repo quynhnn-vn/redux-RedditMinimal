@@ -1,7 +1,7 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import { selectSearchTerm } from "../search/searchSlice";
 
-const fetchPosts = async (subreddit) => {
+export const fetchPosts = async (subreddit) => {
   try {
     const response = await fetch(`https://www.reddit.com${subreddit}.json`);
     const json = await response.json();
