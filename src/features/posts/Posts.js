@@ -21,7 +21,7 @@ export const Posts = () => {
   }, [dispatch, selectedSubreddit]);
 
   const handleTryAgain = () => {
-    dispatch(loadPosts());
+    dispatch(loadPosts(selectedSubreddit));
   };
 
   if (isLoading) {
