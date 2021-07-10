@@ -4,9 +4,9 @@ import postsReducer from "../features/posts/postsSlice";
 import subredditsReducer from "../features/subreddits/subredditsSlice";
 
 export const store = configureStore({
-    reducer: {
-        search: searchReducer,
-        posts: postsReducer,
-        subreddits: subredditsReducer,
-    }
+  reducer: {
+    search: searchReducer,
+    posts: postsReducer,
+    subreddits: subredditsReducer,
+  },
 });

@@ -1,6 +1,10 @@
+/*
+  Handle API fetching and Redux logic of Posts
+*/
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import { selectSearchTerm } from "../search/searchSlice";
 
+// Fetch posts data by subreddit
 export const fetchPosts = async (subreddit) => {
   try {
     const response = await fetch(`https://www.reddit.com${subreddit}.json`);
@@ -11,6 +15,7 @@ export const fetchPosts = async (subreddit) => {
   }
 };
 
+// Fetch comments data by permalink of post
 export const fetchComments = async (permalink) => {
   try {
     const response = await fetch(`https://www.reddit.com${permalink}.json`);

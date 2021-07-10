@@ -1,7 +1,12 @@
+/*
+  Dispatch loading subreddits list
+  and pass subreddits data also the selected subreddit to Subreddit component
+*/
+import "./Subreddits.css";
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import Skeleton, { SkeletonTheme } from 'react-loading-skeleton';
 import { Subreddit } from "./Subreddit";
-import "./Subreddits.css";
 import {
   loadSubreddits,
   selectHasError,
@@ -27,9 +32,11 @@ export const Subreddits = () => {
 
   if (isLoading) {
     return (
-      <main>
-        <h2>Loading...</h2>
-      </main>
+      <div>
+        <SkeletonTheme color="#444444">
+          <Skeleton count={3} />
+        </SkeletonTheme>
+      </div>
     );
   }
 
@@ -43,8 +50,7 @@ export const Subreddits = () => {
   }
 
   return (
-    <div className="card subreddit-card">
-      <h2>Subreddits</h2>
+    <div className="subreddit-card">
       <ul className="subreddits-list">
         {subreddits.map((subreddit) => (
           <Subreddit

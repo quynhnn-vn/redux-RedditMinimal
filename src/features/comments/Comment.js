@@ -1,5 +1,9 @@
-import React from "react";
+/*
+  Receive data of comment from Comments component
+  and return JSX for rendering comment details
+*/
 import "./Comment.css";
+import React from "react";
 import moment from "moment";
 import ReactMarkdown from "react-markdown";
 

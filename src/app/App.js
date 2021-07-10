@@ -24,6 +24,6 @@ const App = () => {
       </aside>
     </>
   );
-}
+};
 
 export default App;

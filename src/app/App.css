@@ -1,19 +1,19 @@
 :root {
-  --color-background: #fcfcfc;
-  --color-background-secondary: #f3f3f3;
-  --color-foreground: #ffffff;
+  --color-background: #1a1a1a;
+  --color-background-secondary: #ffffff;
+  --color-foreground: #ff4500;
   --color-border: #e6e6e6;
   --color-text-header: #444444;
-  --color-text-body: #6f6f6f;
-  --color-text-secondary: #717171;
-  --color-text-invert: #ffffff;
+  --color-text-body: #ffffff;
+  --color-text-secondary: #ffffff;
+  --color-text-invert: #1a1a1a;
   --color-text-link: #4ec3f5;
-  --color-branding: #3d5af1;
-  --color-branding-transparent: #3d5af140;
+  --color-branding: #ffffff;
+  --color-branding-transparent: #ff4500;
 
   --color-alert: #ff304f;
   --color-success: #45b81f;
-  --color-on-hover: #0000000f;
+  --color-on-hover: #6f6f6f;
 
   --box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
     0 4px 6px -2px rgba(0, 0, 0, 0.05) !important;
@@ -53,16 +53,19 @@ header {
   color: var(--color-branding);
   background: var(--color-foreground);
   box-shadow: var(--box-shadow);
-  height: 64px;
+  height: 70px;
   padding: 0 var(--spacing-5);
 }
 
 header .logo-icon {
   grid-column: 2/3;
   margin-right: var(--spacing-1);
-  font-size: 2rem;
+  font-size: 2.5rem;
 }
-
+header p {
+  font-size: 1.5rem;
+}
 header span {
   color: var(--color-text-header);
+  font-size: 1rem;
 }

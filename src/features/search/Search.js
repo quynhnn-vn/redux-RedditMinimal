@@ -1,5 +1,8 @@
-import React from "react";
+/*
+  Handle logic of Search bar
+*/
 import "./Search.css";
+import React from "react";
 import { HiOutlineSearch } from "react-icons/hi";
 import { useDispatch, useSelector } from "react-redux";
 import { selectSearchTerm, setSearchTerm } from "./searchSlice";

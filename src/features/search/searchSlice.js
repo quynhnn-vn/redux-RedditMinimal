@@ -1,3 +1,6 @@
+/*
+  Handle Redux logic of Search bar
+*/
 import { createSlice } from "@reduxjs/toolkit";
 
 export const searchSlice = createSlice({

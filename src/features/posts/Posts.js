@@ -1,12 +1,15 @@
-import React from "react";
+/*
+  Dispatch loading posts
+  and pass this data to Post component
+*/
 import "./Post.css";
+import React, { useEffect} from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Post } from "./Post";
-import { selectFilteredPosts } from "./postsSlice";
+import Skeleton, { SkeletonTheme } from 'react-loading-skeleton';
+import { loadPosts, selectHasError, selectIsLoading, selectFilteredPosts } from "./postsSlice";
 import { selectSearchTerm } from "../search/searchSlice";
-import { useEffect } from "react";
-import { loadPosts, selectHasError, selectIsLoading } from "./postsSlice";
 import { selectSelectedSubreddit } from "../subreddits/subredditsSlice";
+import { Post } from "./Post";
 
 export const Posts = () => {
   const dispatch = useDispatch();
@@ -26,9 +29,11 @@ export const Posts = () => {
 
   if (isLoading) {
     return (
-      <main>
-        <h2>Loading...</h2>
-      </main>
+      <div>
+        <SkeletonTheme color="#444444">
+          <Skeleton count={3}/>
+        </SkeletonTheme>
+      </div>
     );
   }
 

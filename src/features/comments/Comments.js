@@ -1,3 +1,7 @@
+/*
+  Receive data of post from Post component,
+  fetch comments data of this post and pass it to Comment component
+*/
 import React, { useState, useEffect } from "react";
 import { Comment } from "./Comment";
 import { fetchComments } from "../posts/postsSlice";
@@ -11,5 +15,5 @@ export const Comments = ({ post }) => {
     );
   }, [post.permalink]);
 
-  return <div>{comments}</div>;
+  return <div>{comments} </div>;
 };

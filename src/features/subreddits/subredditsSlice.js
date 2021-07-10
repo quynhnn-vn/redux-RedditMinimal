@@ -1,5 +1,9 @@
+/*
+  Handle API fetch and Redux logic of Subreddits
+*/
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 
+// Fetch list of subreddits
 export const fetchSubreddits = async () => {
   try {
     const response = await fetch("https://www.reddit.com/subreddits.json");
@@ -25,8 +29,8 @@ export const subredditsSlice = createSlice({
   },
   reducers: {
     setSelectedSubreddit: (state, action) => {
-        state.selectedSubreddit = action.payload;
-    }
+      state.selectedSubreddit = action.payload;
+    },
   },
   extraReducers: {
     [loadSubreddits.pending]: (state) => {
@@ -45,8 +49,13 @@ export const subredditsSlice = createSlice({
   },
 });
 export const { setSelectedSubreddit } = subredditsSlice.actions;
+
 export const selectSubreddits = (state) => state.subreddits.subreddits;
-export const selectSelectedSubreddit = (state) => state.subreddits.selectedSubreddit;
+
+export const selectSelectedSubreddit = (state) =>
+  state.subreddits.selectedSubreddit;
+
 export const selectIsLoading = (state) => state.subreddits.isLoading;
 export const selectHasError = (state) => state.subreddits.hasError;
+
 export default subredditsSlice.reducer;

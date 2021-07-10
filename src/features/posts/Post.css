@@ -1,11 +1,11 @@
 .card {
-  background: var(--color-foreground);
+  background: var(--color-background-secondary);
   box-shadow: var(--box-shadow);
-  margin-bottom: var(--spacing-4);
   border-radius: var(--radius);
-  padding: var(--spacing-3);
+  padding: var(--spacing-4);
+  margin: var(--spacing-4);
   transition: box-shadow 0.1s ease-in;
-  color: var(--color-text-secondary);
+  color: var(--color-text-invert);
 }
 
 .card:hover {
@@ -31,7 +31,7 @@
 }
 
 .post-details .author-username {
-  color: var(--color-branding);
+  color: var(--color-foreground);
   font-weight: bold;
 }
 
@@ -98,7 +98,7 @@
   background: none;
   border: none;
   cursor: pointer;
-  color: var(--color-text-secondary);
+  color: var(--color-text-invert);
   padding: 0;
   display: flex;
   align-items: center;
@@ -130,5 +130,5 @@
 }
 
 .showing-comments {
-  color: var(--color-branding);
+  color: var(--color-branding-transparent);
 }
